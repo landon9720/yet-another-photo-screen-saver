@@ -4,17 +4,17 @@ Dozens of images from Flickr and your disk are displayed on the screen, organize
 
 # Features
 
- * Displays photos from Flickr, your hard drive, or network
- * Chooses Flickr photos based on tags, search text, or user name
- * Two themes for varied appearance
- * Coordinated multi-display support for systems with several screens
- * Degrades gracefully when network connection is lost
+* Displays photos from Flickr, your hard drive, or network
+* Chooses Flickr photos based on tags, search text, or user name
+* Two themes for varied appearance
+* Coordinated multi-display support for systems with several screens
+* Degrades gracefully when network connection is lost
 
 # Install
 
- # If you don't already have the .NET Framework 2.0 or later installed, you will need to install it using [http://www.update.microsoft.com/ Windows Update]
- # Download and run the [http://yet-another-photo-screen-saver.googlecode.com/files/YetAnotherPhotoScreenSaver-1.5.3-Setup.msi installer]
- # Go to Control Panel -> Display -> Screen Saver, and choose {{{YetAnotherPhotoScreenSaver}}}
+* If you don't already have the .NET Framework 2.0 or later installed, you will need to install it using [http://www.update.microsoft.com/ Windows Update]
+* Download and run the [http://yet-another-photo-screen-saver.googlecode.com/files/YetAnotherPhotoScreenSaver-1.5.3-Setup.msi installer]
+* Go to Control Panel -> Display -> Screen Saver, and choose {{{YetAnotherPhotoScreenSaver}}}
 
 # Screenshot 1
 
