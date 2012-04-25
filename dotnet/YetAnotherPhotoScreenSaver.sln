@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetAnotherPhotoScreenSaver", "YetAnotherPhotoScreenSaver\YetAnotherPhotoScreenSaver.csproj", "{424C7159-5E29-41BE-8FCB-3B724114D029}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{80181810-8274-4682-BDE9-BDAFD82D05CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugConfig|Any CPU = DebugConfig|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{424C7159-5E29-41BE-8FCB-3B724114D029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{424C7159-5E29-41BE-8FCB-3B724114D029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424C7159-5E29-41BE-8FCB-3B724114D029}.DebugConfig|Any CPU.ActiveCfg = DebugConfig|Any CPU
+		{424C7159-5E29-41BE-8FCB-3B724114D029}.DebugConfig|Any CPU.Build.0 = DebugConfig|Any CPU
+		{424C7159-5E29-41BE-8FCB-3B724114D029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{424C7159-5E29-41BE-8FCB-3B724114D029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80181810-8274-4682-BDE9-BDAFD82D05CF}.Debug|Any CPU.ActiveCfg = Debug
+		{80181810-8274-4682-BDE9-BDAFD82D05CF}.DebugConfig|Any CPU.ActiveCfg = DebugConfig
+		{80181810-8274-4682-BDE9-BDAFD82D05CF}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
