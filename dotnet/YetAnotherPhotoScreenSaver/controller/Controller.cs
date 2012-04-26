@@ -13,6 +13,7 @@ namespace Org.Kuhn.Yapss {
             round = 0;
             rounds = new int[w, h];
         }
+
         public Instruction GetInstruction() {
             // first look for any empty squares that need to be filled with a 1x1 image
             for (int j = 0; j < layout.Height; ++j) {
@@ -27,11 +28,17 @@ namespace Org.Kuhn.Yapss {
             // next "round"
             ++round;
 
-            // no empty squares, so use a large image
+            // no empty squares, randomly decide how large an image to place
+            // from two spaces two half of the screen
             int w = 0, h = 0;
-            while (w == 0 || h == 0 || (float)w / (float)h > 2.0 || (float)w / (float)h < 0.5) {
-                w = random.Next(2, layout.Width / 2 + 1);
-                h = random.Next(2, layout.Width / 2 + 1);
+            while (w == 0 || h == 0 || (float)w / (float)h > 2.0 || (float)w / (float)h < 0.50) {
+                w = random.Next(1, layout.Width / 2 + 1);
+                h = random.Next(1, layout.Height / 2 + 1);
+
+                // 40% of the time make sure the images are square
+                // it just looks nicer.
+                if (random.NextDouble() > 0.6)
+                  w = h = Math.Max(w, h);
             }
 
             // find locations overwriting oldest cells
@@ -49,7 +56,7 @@ namespace Org.Kuhn.Yapss {
                                     x += cell.x;
                                     y += cell.y;
                                 }
-                                age = Math.Max(age, rounds[x, y]);
+                                age = Math.Min(age, rounds[x, y]);
                             }
                         }
                     }
@@ -61,7 +68,7 @@ namespace Org.Kuhn.Yapss {
                         minAgeList.Add(new Cell(i, j));
                 }
             }
-           
+
             // of those, choose a location causing the least "damage"
             int minDamage = int.MaxValue;
             List<Cell> minDamageList = new List<Cell>(); // misusing Cell class.. oh well
@@ -82,6 +89,10 @@ namespace Org.Kuhn.Yapss {
             return instruction(coord.x, coord.y, w, h, true);
         }
 
+        // This method has two side-effects.  One, it creates a cell in the real
+        // layout for the image that has been decided upon in GetInstruction() above
+        // and it sets the round in Rounds[x,y] for the location decided upon to remember
+        // in which round the image was set (the age of the image).
         private Instruction instruction(int x, int y, int w, int h, bool longPause) {
             layout.Set(x, y, new Cell(w, h));
             rounds[x, y] = round;
